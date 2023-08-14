@@ -1,5 +1,14 @@
 # Nodejs course
 
+## CPU Bound vs I/O Bound
+
+Nodejs no sirve para aplicaciones CPU Bound ya que no puede realizar tareas mientras se encuentra ocupado el call stack(renderizar o codificar videos)
+
+En Node.js lo que está relacionado con sockets (TCP, UDP) no necesita un hilo aparte, sino que se utilizan mecanismos de monitorización según el sistema operativo, por ejemplo epoll en Linux:
+http://docs.libuv.org/en/v1.x/design.html
+Solo necesitan hilos aparte aquellas tareas que no pueden monitorizarse, como por ejemplo I/O con ficheros y DNS lookups. Por tanto las peticiones de red, si no es necesario hacer un DNS lookup, 
+no necesitan un hilo aparte. El hilo principial pone en marcha la petición pero sin bloquearse, y la próxima vez que intente extraer una tarea de la cola, usará epoll para determinar el evento 
+(llegada de datos en un socket).
 
 ## REPL 
 
