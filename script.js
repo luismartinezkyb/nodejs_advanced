@@ -387,10 +387,36 @@
 // hello()
 
 // ## CACHING MEMORIZE FUNCION IN JAVASCRIPT
-
-const clumsysquare = (num1, num2)=>{
-  for (let i = 0; i <= 1000000; i++) {
-    const element = array[i];
+// function myMemoize (fn, context){
+//   const res = {}
+//   return function(...args){
+//     var argsCache = JSON.stringify(args)
+//     if(!res[argsCache]){
+//       res[argsCache]= fn.call(context|| this, ...args);
+//     }
+//     return res[argsCache]
     
-  }
-}
+//   }
+// }
+// const clumsysquare = (num1, num2)=>{
+//   for (let i = 0; i <= 1000000; i++) {
+//   }
+//   return num1*num2;
+// }
+
+// const memoizedClumzyProduct = myMemoize(clumsysquare);
+
+// console.time("first");
+// console.log(memoizedClumzyProduct(9458, 7649))
+// console.timeEnd('first')
+
+// console.time("second");
+// console.log(memoizedClumzyProduct(9458, 7649))
+// console.timeEnd('second')
+
+
+//## Difference between closure and ScriptProcessorNode
+
+// Two kind of scopes //global and local
+//and closure have 3 globalThis, outterscope, local scope
+
