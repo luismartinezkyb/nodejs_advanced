@@ -1,3 +1,14 @@
+## Js Prep for functions advanced
+
+* IIFE
+* Hoisting
+* Polymorphism
+* Ques 
+* Closures
+* Scope
+* Rest operations
+
+
 # Nodejs course
 
 ## CPU Bound vs I/O Bound
